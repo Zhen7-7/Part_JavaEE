@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>myServlet</servlet-name>
+        <servlet-class>com.sunzhen.MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>myServlet</servlet-name>
+        <url-pattern>/first</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>life</servlet-name>
+        <servlet-class>com.sunzhen.life</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>life</servlet-name>
+        <url-pattern>/life</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MethodServlet</servlet-name>
+        <servlet-class>com.sunzhen.MethodServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MethodServlet</servlet-name>
+        <url-pattern>/method</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>request</servlet-name>
+        <servlet-class>com.sunzhen.RequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>request</servlet-name>
+        <url-pattern>/request</url-pattern>
+    </servlet-mapping>
+</web-app>
