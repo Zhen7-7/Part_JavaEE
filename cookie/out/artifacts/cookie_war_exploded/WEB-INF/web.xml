@@ -4,20 +4,60 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>cookieServlet</servlet-name>
-        <servlet-class>com.sunzhen.cookieServlet</servlet-class>
+        <servlet-name>CookieServlet</servlet-name>
+        <servlet-class>com.sunzhen.CookieServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CookieServlet</servlet-name>
+        <url-pattern>/cookie</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <servlet-class>com.sunzhen.GetCookieServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>cookieServlet</servlet-name>
-        <url-pattern>/cookie</url-pattern>
+        <servlet-name>GetCookieServlet</servlet-name>
+        <url-pattern>/getcookie</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>getcookieServlet</servlet-name>
-        <servlet-class>com.sunzhen.getcookieServlet</servlet-class>
+        <servlet-name>PageServlet</servlet-name>
+        <servlet-class>com.cookie.control.PageServlet</servlet-class>
+    </servlet>
+
+
+    <servlet-mapping>
+        <servlet-name>PageServlet</servlet-name>
+        <url-pattern>/page</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.cookie.control.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.cookie.control.HelloServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CookieProjectServlet</servlet-name>
+        <servlet-class>com.cookie.control.CookieProjectServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>getcookieServlet</servlet-name>
-        <url-pattern>/getcookie</url-pattern>
+        <servlet-name>CookieProjectServlet</servlet-name>
+        <url-pattern>/ck</url-pattern>
     </servlet-mapping>
 </web-app>
