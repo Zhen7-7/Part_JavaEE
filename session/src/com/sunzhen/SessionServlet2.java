@@ -18,6 +18,7 @@ public class SessionServlet2 extends HttpServlet {
        response.setContentType("text/html:charset:utf-8");
 
        //获取session对象:
+
         HttpSession session = request.getSession();
         //获取session中的参数值:
         String str = (String)session.getAttribute("111");
