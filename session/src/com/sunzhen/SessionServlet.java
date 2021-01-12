@@ -15,8 +15,15 @@ import java.io.IOException;
  *      5.每次关闭浏览器的时候重新请求都会开启一个新的session对象,因为JSESSIONID保存在浏览器的内存中,是临时cookie
  *      关闭之后自然消失
  *
+ *
  * 使用:
- *      HttpSession session=request.getSession();
+ *      获取session对象
+ *          HttpSession session=request.getSession();
+ *      修改session的保持时间
+ *          session.setMaxInactiveInterval(int second);
+ *      设置session强制失效
+ *          session.invalidate()
+ *
  */
 public class SessionServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
@@ -33,9 +40,18 @@ public class SessionServlet extends javax.servlet.http.HttpServlet {
         System.out.println("接收到请求");
         //获取session对象:
         HttpSession session = request.getSession();
+        //设置session的有效时常 单位为s
+//        session.setMaxInactiveInterval(15);
         //getid方法获得id
         String id = session.getId();
         System.out.println("id为:"+id);
+        //设置session强制失效;
+//        session.invalidate();
+        //向session中设置变量:
+        session.setAttribute("111","孙朕");
+
+
+
 
         response.getWriter().write("学习session");
 
