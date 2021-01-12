@@ -19,6 +19,11 @@ public class TestJDBC {
          * username:用户名
          * password:密码
          *
+         *
+         *
+         *
+         *
+         *
          * */
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/login?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC","root","root");
         //3.测试连接是否成功
