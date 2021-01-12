@@ -19,11 +19,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="Java EE 6-Java EE 6" level="project" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://D:/Soft/StudySoft/TomCat/tomcat9/apache-tomcat-9.0.41/lib/servlet-api.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk1.8.0_151/lib/mysql-connector-java-8.0.22/mysql-connector-java-8.0.22.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -32,22 +32,10 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21" />
+          <root url="jar://D:/Soft/StudySoft/TomCat/tomcat7/apache-tomcat-7.0/apache-tomcat-7.0.96/lib/servlet-api.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/build/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/demo/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/generated/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/legacy/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/main/core-api/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/main/core-impl/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/main/protocol-impl/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/main/user-api/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/main/user-impl/java" />
-          <root url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21/src/test/java" />
-        </SOURCES>
-        <jarDirectory url="file://C:/Program Files/MySQL/mysql-connector-java-8.0.21" recursive="false" />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

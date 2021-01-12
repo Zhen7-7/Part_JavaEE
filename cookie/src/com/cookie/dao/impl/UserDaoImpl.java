@@ -20,12 +20,8 @@ public class UserDaoImpl implements UserDao {
         try {
         //加载驱动
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-            try {
             //获取连接
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/login","root","root");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/login?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC","root","root");
             //获取预处理块
             pstmt = conn.prepareStatement("select * from user where name = ? and pwd =?");
             //给？赋值
@@ -33,7 +29,7 @@ public class UserDaoImpl implements UserDao {
             pstmt.setString(2,user.getPwd());
             //执行sql语句
             rs = pstmt.executeQuery();
-            //从resultset中获取结果值
+            //从resultset中获取结 果值
             while (rs.next()){
                 u = new User(rs.getInt("id"),rs.getString("name"),rs.getString("pwd"));
             }
@@ -70,12 +66,9 @@ public class UserDaoImpl implements UserDao {
         try {
             //加载驱动
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
+
             //获取连接
-            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/login","root","root");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/login?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC","root","root");
             //获取预处理块
             pstmt = conn.prepareStatement("select * from user where id = ?");
             //给？赋值

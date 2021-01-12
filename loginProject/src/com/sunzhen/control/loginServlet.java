@@ -1,4 +1,4 @@
-package com.sunzhen.contol;
+package com.sunzhen.control;
 
 import com.sunzhen.Service.UserService;
 import com.sunzhen.Service.impl.UserServiceImpl;
@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(name = "loginServlet")
 public class loginServlet extends HttpServlet {

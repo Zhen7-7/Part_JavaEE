@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
        <servlet-name>pageServlet</servlet-name>
-       <servlet-class>com.sunzhen.contol.pageServlet</servlet-class>
+       <servlet-class>com.sunzhen.control.pageServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>pageServlet</servlet-name>
@@ -14,10 +14,20 @@
 
     <servlet>
         <servlet-name>loginServlet</servlet-name>
-        <servlet-class>com.sunzhen.contol.loginServlet</servlet-class>
+        <servlet-class>com.sunzhen.control.loginServlet</servlet-class>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.sunzhen.control.helloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 </web-app>

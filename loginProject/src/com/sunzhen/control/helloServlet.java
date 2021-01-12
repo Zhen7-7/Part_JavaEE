@@ -1,4 +1,4 @@
-package com.sunzhen.contol;
+package com.sunzhen.control;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

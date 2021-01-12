@@ -6,7 +6,35 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52cf304d-765b-48e1-858d-7b972fb2c1ac" name="Default Changelist" comment="" />
+    <list default="true" id="52cf304d-765b-48e1-858d-7b972fb2c1ac" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../cookie/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/control/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/control/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/control/PageServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cookie/src/com/cookie/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyTomcat" beforeDir="false" afterPath="$PROJECT_DIR$/../MyTomcat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cookie/cookie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../cookie/cookie.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cookie/out/artifacts/cookie_war_exploded/WEB-INF/classes/com/sunzhen/cookieServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cookie/out/artifacts/cookie_war_exploded/WEB-INF/classes/com/sunzhen/cookieServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cookie/out/artifacts/cookie_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cookie/out/artifacts/cookie_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cookie/out/production/cookie/com/sunzhen/cookieServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../cookie/out/production/cookie/com/sunzhen/cookieServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cookie/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cookie/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/out/artifacts/loginProject_war_exploded/WEB-INF/classes/com/sunzhen/Dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginProject/out/artifacts/loginProject_war_exploded/WEB-INF/classes/com/sunzhen/Dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/out/artifacts/loginProject_war_exploded/WEB-INF/classes/com/sunzhen/contol/loginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/out/artifacts/loginProject_war_exploded/WEB-INF/classes/com/sunzhen/contol/pageServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/out/artifacts/loginProject_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../loginProject/out/artifacts/loginProject_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/out/production/loginProject/com/sunzhen/Dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../loginProject/out/production/loginProject/com/sunzhen/Dao/impl/UserDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/out/production/loginProject/com/sunzhen/contol/loginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/out/production/loginProject/com/sunzhen/contol/pageServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/src/com/sunzhen/contol/helloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginProject/src/com/sunzhen/control/helloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/src/com/sunzhen/contol/loginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginProject/src/com/sunzhen/control/loginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/src/com/sunzhen/contol/pageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../loginProject/src/com/sunzhen/control/pageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loginProject/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../loginProject/web/WEB-INF/web.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +49,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -29,10 +60,11 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1mjxULsCO6SKW4Nd8o8XHdixu7R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/Soft/StudySoft/TomCat/tomcat9/apache-tomcat-9.0.41/lib/servlet-api.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -197,11 +229,23 @@
       <updated>1610020815404</updated>
       <workItem from="1610020818951" duration="6379000" />
       <workItem from="1610070852547" duration="6963000" />
-      <workItem from="1610160816620" duration="575000" />
+      <workItem from="1610160816620" duration="1200000" />
+      <workItem from="1610335215704" duration="1022000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
