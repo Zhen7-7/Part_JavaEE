@@ -46,10 +46,55 @@
             <jsp:include page="dynamicImport.jsp"></jsp:include>
             两个页面不会进行合并，分别生成自己的servlet文件，但是页面在最终展示的时候是合并到一起的
             优点：没有耦合，可以存在同名的变量
+        请求转发:
+            在jsp中也可以试下请求转发功能
+            <jsp:forward page:"forward.jsp"></jsp:forward>  page填写的是jsp页面的相对路径;
+            注意:在标签中间不可以添加任何字符,除了<jsp:param name:"" value="">
+            在转发的页面如果先要获得属性值通过 request.getParameter(String key);
+
+        九大对象：
+                pageContext：表示页面的上下文的对象封存了其他的内置对象，封存了当前页面的运行信息
+                            注意：每一个页面都有一个对应的pagecontext对象，
+                            伴随着当前页面的结束而结束
+                request：封装当前请求的数据，由tomcat创建，一次请求对应一个request对象
+                session：用来封装同一个用户的不同请求的共享数据，一次会话对应一个session对象
+                application：相当于ServletContext对象，一个web项目只有一个对象，存储着所有用户的共享数据，从服务器启动到服务器结束
+                response：响应对象，用来响应请求数据，将处理结果返回给浏览器，可以进行重定向
+                page:代表当前jsp对象，跟java中的this指针类似
+                exception：异常对象，存储当前运行的异常信息，必须在page指令=中添加属性isErrorPage=true
+                config:相当于Serlverconfig对象，用来获取web.xml中配置的数据，完成servlet的初始化操作
+                out：响应对象，jsp内部使用，带有缓存区的响应对象，效率要高于repsonse
+
+        四大作用域：
+                pageContext：表示当前页面，解决当前页面内的数据共享问题，获取其他内置对象
+                request：一次请求，一次请求的servlet的数据共享，通过请求转发的方式，将数据流转到下一个servlet
+                session：一次会话，一个用户发送的不同请求之间的数据共享，可以将数据从一个请求流转到其他请求
+                application：项目内，不同用的数据共享问题，将数据从一个用户流转到其他用户
+        路径问题：
+                想要获取项目中的资源，可以使用相对路径，也可以使用绝对路径
+                相对路径：相对于当前页面的路径
+                    问题：1、资源的位置不可以随便更改
+                          2、需要使用../的方式进行文件夹的跳出，如果目录结果比较深，可以操作起来比较麻烦
+                绝对路径：
+                    在请求路径的前面加/,表示当前服务器的根路径，使用的时候要添加/虚拟项目名称/资源目录
+                使用jsp中自带的全局路径声明：
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.util.*,java.lang.*" pageEncoding="CESU-8" %>
 <%@ page session="true" %>
 <%@ page errorPage="error.jsp" %>
+
+String path = request.getContextPath();
+System.out.println(path);
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+System.out.println(basePath);
+
+%>
+<html>
+<head>
+    <base href="<%=basePath%>">
+    <title>Title</title>
+</head>
+<body>
 
 
 <html>
@@ -57,6 +102,8 @@
     <title>Title</title>
 </head>
 <body>
+
+
 <%!
     String str = "莫玉丹是猪猪";
     public void test(){
@@ -85,6 +132,21 @@
 
 <%@ include file="staticImport.jsp"%>
 <jsp:include page="dynamicImport.jsp"></jsp:include>
+
+<%--<!-- 请求转发-->
+<jsp:forward page="forward.jsp">
+    <jsp:param name="beijing" value="busy"/>
+    <jsp:param name="haerbin" value="cold"/>
+</jsp:forward>--%>
+<%--<%--%>
+<%--response.sendRedirect("forward.jsp");--%>
+<%--%>--%>
+
+
+
+<a href="a/a.jsp">aaa</a>
+<a href="b/b.jsp">bbb</a>
+
 page jsp
 </body>
 </html>

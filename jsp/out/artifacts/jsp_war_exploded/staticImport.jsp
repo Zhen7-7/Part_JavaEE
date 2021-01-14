@@ -13,6 +13,6 @@
 <body>
 <br>
 我是静态导入页面
-
+<%=request.getParameter("China")%>
 </body>
 </html>

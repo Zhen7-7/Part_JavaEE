@@ -46,6 +46,24 @@
             <jsp:include page="dynamicImport.jsp"></jsp:include>
             两个页面不会进行合并，分别生成自己的servlet文件，但是页面在最终展示的时候是合并到一起的
             优点：没有耦合，可以存在同名的变量
+        请求转发:
+            在jsp中也可以试下请求转发功能
+            <jsp:forward page:"forward.jsp"></jsp:forward>  page填写的是jsp页面的相对路径;
+            注意:在标签中间不可以添加任何字符,除了<jsp:param name:"" value="">
+            在转发的页面如果先要获得属性值通过 request.getParameter(String key);
+
+        九大对象：
+                pageContext：表示页面的上下文的对象封存了其他的内置对象，封存了当前页面的运行信息
+                            注意：每一个页面都有一个对应的pagecontext对象，
+                            伴随着当前页面的结束而结束
+                request：封装当前请求的数据，由tomcat创建，一次请求对应一个request对象
+                session：用来封装同一个用户的不同请求的共享数据，一次会话对应一个session对象
+                application：相当于ServletContext对象，一个web项目只有一个对象，存储着所有用户的共享数据，从服务器启动到服务器结束
+                response：响应对象，用来响应请求数据，将处理结果返回给浏览器，可以进行重定向
+                page:代表当前jsp对象，跟java中的this指针类似
+                exception：异常对象，存储当前运行的异常信息，必须在page指令=中添加属性isErrorPage=true
+                config:相当于Serlverconfig对象，用来获取web.xml中配置的数据，完成servlet的初始化操作
+                out：响应对象，jsp内部使用，带有缓存区的响应对象，效率要高于repsonse
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.util.*,java.lang.*" pageEncoding="CESU-8" %>
 <%@ page session="true" %>
@@ -85,6 +103,18 @@
 
 <%@ include file="staticImport.jsp"%>
 <jsp:include page="dynamicImport.jsp"></jsp:include>
+
+<%--<!-- 请求转发-->
+<jsp:forward page="forward.jsp">
+    <jsp:param name="beijing" value="busy"/>
+    <jsp:param name="haerbin" value="cold"/>
+</jsp:forward>--%>
+
+
+
+<a href="a/a.jsp">aaa</a>
+<a href="b/b.jsp">bbb</a>
+
 page jsp
 </body>
 </html>
