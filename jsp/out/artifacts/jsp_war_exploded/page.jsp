@@ -36,6 +36,16 @@
     脚本调用方法:
         使用<%= 世界调用变量和方法(必须有返回值)%>
         注意:不能在变量或方法后添加
+    页面导入的方式
+        静态导入：
+            <%@ include file="staticImport.jsp"%>  file中填写的是jsp文件的相对路径
+            不会将静态导入的页面生成一个新的servlet文件，而是将两个文件合并，
+            优点：运行效率高
+            缺点：两个页面会耦合到一起，不利于维护，两个页面中不能存在相同名称的变量名
+        动态导入：
+            <jsp:include page="dynamicImport.jsp"></jsp:include>
+            两个页面不会进行合并，分别生成自己的servlet文件，但是页面在最终展示的时候是合并到一起的
+            优点：没有耦合，可以存在同名的变量
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.util.*,java.lang.*" pageEncoding="CESU-8" %>
 <%@ page session="true" %>
@@ -68,9 +78,13 @@
 <%}else{%>
 <b>今天天气真差</b>
 <%test();}%>
+
+<!-- 脚本调用方法-->
 <%=str%>
 <%=test2()%>
 
+<%@ include file="staticImport.jsp"%>
+<jsp:include page="dynamicImport.jsp"></jsp:include>
 page jsp
 </body>
 </html>
