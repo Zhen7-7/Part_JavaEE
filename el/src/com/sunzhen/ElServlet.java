@@ -35,8 +35,21 @@ import java.util.HashMap;
  *          直接在表达式中世界写入算法操作即可,如果是关系运算,返回true或false
  *          注意:在el表达时中"+"表示加法操作而不是字符串连接符
  *
- *
- *
+ *       EL表达式可以进行逻辑运算
+ *          ${true&&false}<br>
+ *          ${true&&true}<br>
+ *          ${true||false}<br>
+ *          ${true||true}<br>
+ *       EL表达式获取header信息
+ *          ${header}:获取所有请求头信息
+ *          ${header[key]}:获取指定key的数据
+ *          ${headerValues[key]}:获取key对应的一组数据，返回类型是数组
+ *          ${headervalues[key][0]}:获取key对应数组的某一个值
+ *       EL表达式获取cookie数据：
+ *          ${cookie}:获取cookie中的所有数据
+ *          ${cookie.key}：获取cookie中指定key的数据
+ *          ${cookie.key.name}：获取cookie指定key数据的name
+ *          ${cookie.key.value}：获取cookie指定key数据的value
  *
  *
  * */

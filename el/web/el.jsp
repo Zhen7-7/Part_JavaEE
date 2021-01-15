@@ -66,6 +66,16 @@ ${1/0}<br>
 ${1>2}<br>
 ${1>2?"男":"女"}
 ${1+"2"}
+<!--获取请求头数据-->
+${header}<br>
+${header["host"]}<br>
+${headerValues["accept-language"][0]}<br>
+<!--获取cookie对象-->
+${header["cookie"]}<br>
+${cookie}<br>
+${cookie.JSESSIONID}<br>
+${cookie.JSESSIONID.name}<br>
+${cookie.JSESSIONID.value}<br>
 
 </body>
 </html>
