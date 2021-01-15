@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.sunzhen.entity.User" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: Sunzhen
   Date: 2021/1/15
@@ -15,5 +16,8 @@
 name:<%=request.getParameter("name")%>
 pwd:<%=request.getParameter("pwd")%>
 aa:<%=request.getAttribute("aa")%>
+town:<%=((User)request.getAttribute("user")).getAddress().getTown()%>
+香坊区:<%=((User)((ArrayList)request.getAttribute("list")).get(1)).getAddress().getTown()%>
+
 </body>
 </html>

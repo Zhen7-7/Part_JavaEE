@@ -5,7 +5,7 @@
          version="4.0">
     <servlet>
         <servlet-name>elServlet</servlet-name>
-        <servlet-class>com.sunzhen.elServlet</servlet-class>
+        <servlet-class>com.sunzhen.ElServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>elServlet</servlet-name>
