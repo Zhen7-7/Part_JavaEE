@@ -31,6 +31,32 @@
         var:表示参数的key
         scope:删除指定作用域的数据
         注意:如果没有指定scope属性,那么默认会把所有的作用域的参入全部删除
+    <c:if test("${a>5})>        逻辑判断: if判断
+        <h1>显示的内容<h1>
+    </c:if>'
+        test:填写逻辑判断表达时
+        var:条件表达时的结果存储变量
+        scope:结果变量存储的作用域
+
+
+        //进行多重逻辑判断  类似于switch
+        <c:set var="age" value="20"></c:set>
+        <c:choose>
+            <c:when test="${age<10}">
+                <h1>小孩</h1>
+            </c:when>
+              <c:when test="${age<20}">
+                <h1>青少年</h1>
+            </c:when>
+              <c:when test="${age<30}">
+                <h1>青年</h1>
+            </c:when>
+              <c:when test="${age<40}">
+                <h1>中年</h1>
+            </c:when>
+            <c:otherwise>
+                <h3>i don't know</h3>
+            </c:otherwise>
 
 
 
@@ -73,5 +99,39 @@
     <c:out value="${sessionScope.java}"></c:out><br>
     <c:out value="${applicationScope.java}"></c:out><br>
 
+<%
+    int i=10;
+    if(i>2){
+%>
+    jstl真好学
+<%
+    }
+
+%>
+<c:set var="a" value="6"></c:set>
+<c:if test="${a>3}" var="flag" scope="request">
+    <h1>jstl is esay </h1>
+</c:if>
+
+<c:set var="age" value="20"></c:set>
+<c:choose>
+    <c:when test="${age<10}">
+        <h1>小孩</h1>
+    </c:when>
+      <c:when test="${age<20}">
+        <h1>青少年</h1>
+    </c:when>
+      <c:when test="${age<30}">
+        <h1>青年</h1>
+    </c:when>
+      <c:when test="${age<40}">
+        <h1>中年</h1>
+    </c:when>
+    <c:otherwise>
+        <h3>i don't know</h3>
+    </c:otherwise>
+
+
+</c:choose>
 </body>
 </html>
