@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="javax.lang.model.element.NestingKind" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Set" %><%--
   Created by IntelliJ IDEA.
   User: Sunzhen
   Date: 2021/1/16
@@ -31,7 +34,41 @@
         var:表示参数的key
         scope:删除指定作用域的数据
         注意:如果没有指定scope属性,那么默认会把所有的作用域的参入全部删除
+    <c:if test("${a>5})>        逻辑判断: if判断
+        <h1>显示的内容<h1>
+    </c:if>'
+        test:填写逻辑判断表达时
+        var:条件表达时的结果存储变量
+        scope:结果变量存储的作用域
 
+
+        //进行多重逻辑判断  类似于switch
+        <c:set var="age" value="20"></c:set>
+        <c:choose>
+            <c:when test="${age<10}">
+                <h1>小孩</h1>
+            </c:when>
+              <c:when test="${age<20}">
+                <h1>青少年</h1>
+            </c:when>
+              <c:when test="${age<30}">
+                <h1>青年</h1>
+            </c:when>
+              <c:when test="${age<40}">
+                <h1>中年</h1>
+            </c:when>
+            <c:otherwise>
+                <h3>i don't know</h3>
+            </c:otherwise>
+
+    //循环标签
+    <c:forEach begin="0" end="3" step="1" varStatus="sta" var="q" items="${list}">
+         ${q}
+    </c:forEach>
+            begin:起始值
+            end: 结束值
+            step:步长
+            
 
 
 --%>
@@ -72,6 +109,95 @@
     <c:out value="${requestScope.java}"></c:out><br>
     <c:out value="${sessionScope.java}"></c:out><br>
     <c:out value="${applicationScope.java}"></c:out><br>
+
+<%
+    int i=10;
+    if(i>2){
+%>
+    jstl真好学
+<%
+    }
+
+%>
+<c:set var="a" value="6"></c:set>
+<c:if test="${a>3}" var="flag" scope="request">
+    <h1>jstl is esay </h1>
+</c:if>
+
+<c:set var="age" value="20"></c:set>
+<c:choose>
+    <c:when test="${age<10}">
+        <h1>小孩</h1>
+    </c:when>
+      <c:when test="${age<20}">
+        <h1>青少年</h1>
+    </c:when>
+      <c:when test="${age<30}">
+        <h1>青年</h1>
+    </c:when>
+      <c:when test="${age<40}">
+        <h1>中年</h1>
+    </c:when>
+    <c:otherwise>
+        <h3>i don't know</h3>
+    </c:otherwise>
+</c:choose>
+
+
+<!-- 循环标签 -->
+<table border="1px">
+    <tr>
+        <td>1</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>222</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>333</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>444</td>
+    </tr>
+</table>
+<% for(int k=0;k<5;k+=4){
+
+}%>
+<c:forEach begin="0" end="3" step="1" varStatus="sta">
+    ${sta.index}---${sta.count}---${sta.first}---${sta.last}<br>
+</c:forEach>
+
+<%
+    ArrayList<String> list = new ArrayList<String>();
+    list.add("aaa");
+    list.add("ccc");
+    list.add("ddd");
+    list.add("bbb");
+    request.setAttribute("list",list);
+
+    HashMap<String,String> map = new HashMap<String,String>();
+    map.put("1","11111");
+    map.put("2","22222");
+    map.put("3","33333");
+    map.put("4","44444");
+    request.setAttribute("map",map);
+
+%>
+<c:forEach begin="0" end="3" step="1" varStatus="sta" var="q" items="${list}">
+    ${q}
+</c:forEach>
+<table border="1px">
+    <c:forEach begin="0" end="3" step="1" var="i" items="${map}">
+        <tr>
+            <td>${i.key}</td>
+            <td>${i.value}</td>
+        </tr>
+    </c:forEach>
+</table>
+
 
 </body>
 </html>

@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="javax.lang.model.element.NestingKind" %>
+<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.Set" %><%--
   Created by IntelliJ IDEA.
   User: Sunzhen
   Date: 2021/1/16
@@ -58,6 +61,16 @@
                 <h3>i don't know</h3>
             </c:otherwise>
 
+    //循环标签
+    <c:forEach begin="0" end="3" step="1" varStatus="sta" var="q" items="${list}">
+         ${q}
+    </c:forEach>
+            begin:起始值
+            end: 结束值
+            step:步长
+            varstatus:循环状态的变量值名称
+            var:集合数据的每条记录的迭代值
+            items:从作用域中获取的数据
 
 
 --%>
@@ -130,8 +143,63 @@
     <c:otherwise>
         <h3>i don't know</h3>
     </c:otherwise>
-
-
 </c:choose>
+
+
+<!-- 循环标签 -->
+<table border="1px">
+    <tr>
+        <td>1</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>222</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>333</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>444</td>
+    </tr>
+</table>
+<% for(int k=0;k<5;k+=4){
+
+}%>
+<c:forEach begin="0" end="3" step="1" varStatus="sta">
+    ${sta.index}---${sta.count}---${sta.first}---${sta.last}<br>
+</c:forEach>
+
+<%
+    ArrayList<String> list = new ArrayList<String>();
+    list.add("aaa");
+    list.add("ccc");
+    list.add("ddd");
+    list.add("bbb");
+    request.setAttribute("list",list);
+
+    HashMap<String,String> map = new HashMap<String,String>();
+    map.put("1","11111");
+    map.put("2","22222");
+    map.put("3","33333");
+    map.put("4","44444");
+    request.setAttribute("map",map);
+
+%>
+<c:forEach begin="0" end="3" step="1" varStatus="sta" var="q" items="${list}">
+    ${q}
+</c:forEach>
+<table border="1px">
+    <c:forEach begin="0" end="3" step="1" var="i" items="${map}">
+        <tr>
+            <td>${i.key}</td>
+            <td>${i.value}</td>
+        </tr>
+    </c:forEach>
+</table>
+
+
 </body>
 </html>
