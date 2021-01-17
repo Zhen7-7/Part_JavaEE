@@ -19,7 +19,7 @@
     </filter>
     <filter-mapping>
         <filter-name>filter2</filter-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>*.do</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>filterServlet</servlet-name>
@@ -36,6 +36,6 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>FilterServlet2</servlet-name>
-        <url-pattern>/filter2</url-pattern>
+        <url-pattern>/filter2.do</url-pattern>
     </servlet-mapping>
 </web-app>
