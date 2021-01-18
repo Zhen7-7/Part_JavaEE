@@ -1,0 +1,20 @@
+监听器:
+    监听作用对象的创建 销毁 以及属性的相关配置,可以添加一些公共的属性配置,做逻辑判断
+
+    主要监听三种作用域
+        ServletContext(application)  Session  Request
+
+        Request
+            接口:
+            1.ServletRequestListener :监听Request对象的创建和销毁
+                public void requestDestroyed(ServletRequestEvent servletRequestEvent) request对象销毁时添加的逻辑代码
+                public void requestInitialized(ServletRequestEvent servletRequestEvent) request对象创建时添加的逻辑代码
+            2.ServletRequestAttributeListener:监听Request作用域属性的添加,删除和修改
+                  public void attributeAdded(ServletRequestAttributeEvent servletRequestAttributeEvent)  属性添加时要做的事情
+                  public void attributeRemoved(ServletRequestAttributeEvent servletRequestAttributeEvent) 属性删除时要做的事情
+                  public void attributeReplaced(ServletRequestAttributeEvent servletRequestAttributeEvent) 属性更改时要做的事情
+
+
+
+
+
