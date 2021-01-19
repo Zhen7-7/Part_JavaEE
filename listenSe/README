@@ -13,6 +13,24 @@
                   public void attributeAdded(ServletRequestAttributeEvent servletRequestAttributeEvent)  属性添加时要做的事情
                   public void attributeRemoved(ServletRequestAttributeEvent servletRequestAttributeEvent) 属性删除时要做的事情
                   public void attributeReplaced(ServletRequestAttributeEvent servletRequestAttributeEvent) 属性更改时要做的事情
+        ServletContext:
+            接口:
+            1.ServletContextListener :监听ServletContext的对象的创建和销毁
+                public void contextInitialized(ServletContextEvent servletContextEvent) 创建对象,当启动tomcat服务器的时候创建
+                public void contextDestroyed(ServletContextEvent servletContextEvent) 销毁对象,当关闭tomcat服务器的时候销毁
+            2.ServltContextAttributeListener
+                public void attributeAdded(ServletContextAttributeEvent servletContextAttributeEvent)    属性添加时要做的事情
+                public void attributeRemoved(ServletContextAttributeEvent servletContextAttributeEvent) 属性删除时要做的事情
+                public void attributeReplaced(ServletContextAttributeEvent servletContextAttributeEvent) 属性更改时要做的事情
+          Session:
+             接口；
+             1.HttpSessionListener:  监听session对象的创建和销毁
+                public void sessionCreated(HttpSessionEvent httpSessionEvent)  session对象创建的时候执行
+                publHttpSessionListener:  监听session对象的创建和销毁                                                         ic void sessionDestroyed(HttpSessionEvent httpSessionEvent)  session对象销毁的时候执行
+             2.HttpSessionAttributeListener :监听session对象中属性的添加，删除和更改
+                public void attributeAdded(HttpSessionBindingEvent httpSessionBindingEvent) 添加属性时被调用
+                public void attributeRemoved(HttpSessionBindingEvent httpSessionBindingEvent) 删除属性时被调用
+                public void attributeReplaced(HttpSessionBindingEvent httpSessionBindingEvent) 修改属性时被调用
 
 
 
