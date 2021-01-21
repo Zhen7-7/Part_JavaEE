@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/* 元素选择器: 
+			 通过元素的名字进行定位 无论这个元素藏得多深都可以获得
+			 */
+			h1{
+				color: red;
+				font-family: 宋体;
+			}
+			i{
+				color:blue;
+			}
+			/*class选择器
+			 	不同类型的标签使用相同的类型;
+			*/
+			.mycls{
+				color: hotpink;
+				font-family: "bookman old style";
+			}
+			/*id 选择器:
+			 * 可以确定唯一的元素
+			 */
+			#myid{
+				color: deeppink;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>我是<i>一个</i>标题</h1>
+		<h1 class="mycls">我是一个标题</h1>
+		<h1>我是一个标题</h1>
+		<h2 class="mycls">我是一个标题</h2>
+		<h2>我是一个标题</h2>
+		<h2 id="myid">我是一个标题</h2>
+	</body>
+</html>
